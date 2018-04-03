@@ -1,17 +1,17 @@
 fileFormatVersion: 2
-guid: 71a4284df8c36434b95eebfd6c31a966
-timeCreated: 1522710192
+guid: ca6fa667b8c8bcb468257ae548137b30
+timeCreated: 1522789197
 licenseType: Free
 ModelImporter:
   serializedVersion: 22
   fileIDToRecycleName:
     100000: //RootNode
     400000: //RootNode
-    2100000: Green
-    2100002: Red
+    2100000: Red
+    2100002: Green
     2300000: //RootNode
     3300000: //RootNode
-    4300000: StraightRoad
+    4300000: ArtillaryLaser
     9500000: //RootNode
   externalObjects: {}
   materials:

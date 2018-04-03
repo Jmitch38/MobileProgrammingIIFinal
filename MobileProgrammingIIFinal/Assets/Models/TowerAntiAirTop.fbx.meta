@@ -1,6 +1,6 @@
 fileFormatVersion: 2
-guid: 71a4284df8c36434b95eebfd6c31a966
-timeCreated: 1522710192
+guid: 47dc95340f2bc3444b0524c54b4a10b6
+timeCreated: 1522773325
 licenseType: Free
 ModelImporter:
   serializedVersion: 22
@@ -11,7 +11,7 @@ ModelImporter:
     2100002: Red
     2300000: //RootNode
     3300000: //RootNode
-    4300000: StraightRoad
+    4300000: TowerAntiAirTop
     9500000: //RootNode
   externalObjects: {}
   materials:

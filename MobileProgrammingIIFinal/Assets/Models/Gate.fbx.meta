@@ -1,17 +1,18 @@
 fileFormatVersion: 2
-guid: 71a4284df8c36434b95eebfd6c31a966
-timeCreated: 1522710192
+guid: 2c34e5a365614094193c82f3746dcf20
+timeCreated: 1522772218
 licenseType: Free
 ModelImporter:
   serializedVersion: 22
   fileIDToRecycleName:
     100000: //RootNode
     400000: //RootNode
-    2100000: Green
-    2100002: Red
+    2100000: Red
+    2100002: Green
+    2100004: Blue
     2300000: //RootNode
     3300000: //RootNode
-    4300000: StraightRoad
+    4300000: Gate
     9500000: //RootNode
   externalObjects: {}
   materials:

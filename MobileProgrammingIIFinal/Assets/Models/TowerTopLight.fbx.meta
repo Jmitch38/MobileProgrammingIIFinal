@@ -1,17 +1,17 @@
 fileFormatVersion: 2
-guid: 71a4284df8c36434b95eebfd6c31a966
-timeCreated: 1522710192
+guid: 0929bb7f94d45e54c8c37c208a180160
+timeCreated: 1522775412
 licenseType: Free
 ModelImporter:
   serializedVersion: 22
   fileIDToRecycleName:
     100000: //RootNode
     400000: //RootNode
-    2100000: Green
-    2100002: Red
+    2100000: Red
+    2100002: Green
     2300000: //RootNode
     3300000: //RootNode
-    4300000: StraightRoad
+    4300000: TowerLightTop
     9500000: //RootNode
   externalObjects: {}
   materials:
