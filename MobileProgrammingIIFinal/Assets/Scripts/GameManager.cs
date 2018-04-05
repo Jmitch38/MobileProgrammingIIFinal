@@ -3,7 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class CameraController : MonoBehaviour
+public class GameManager : MonoBehaviour
 {
+    public int GateHealth1;
 
 }

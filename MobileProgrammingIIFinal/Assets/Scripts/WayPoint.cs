@@ -1,9 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 
-public class CameraController : MonoBehaviour
+public class WayPoint : MonoBehaviour
 {
-
+    public Transform[] WayPoints;
 }
