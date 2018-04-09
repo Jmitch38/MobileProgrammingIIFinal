@@ -5,6 +5,9 @@ TagManager:
   serializedVersion: 2
   tags:
   - Waypoint
+  - MLaserBlue
+  - SLaserBlue
+  - LLaserBlue
   layers:
   - Default
   - TransparentFX
