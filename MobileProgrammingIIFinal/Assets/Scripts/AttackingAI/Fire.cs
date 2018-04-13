@@ -5,6 +5,7 @@ using UnityEngine;
 public class Fire : MonoBehaviour
 {
     //Targeting
+    public Transform[] Gates;
     public Transform target;
     public GameObject Laser;
     float speed = 1f;
@@ -15,6 +16,7 @@ public class Fire : MonoBehaviour
     void Update()
     {
         LookAtEnemy();
+        WhichGateisAlive();
         KeepFiringAssholes();
     }
 
@@ -30,6 +32,11 @@ public class Fire : MonoBehaviour
 
         // Move our position a step closer to the target.
         transform.rotation = Quaternion.LookRotation(newDir);
+    }
+
+    void WhichGateisAlive()
+    {
+
     }
 
     void KeepFiringAssholes()
