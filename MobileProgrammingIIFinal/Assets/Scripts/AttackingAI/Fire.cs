@@ -6,12 +6,12 @@ public class Fire : MonoBehaviour
 {
     //Targeting
     public Transform[] Gates;
-    public Transform target;
-    public GameObject Laser;
-    float speed = 1f;
+    public Transform target;  
+    float speed = 15f;
 
     //where lasers come from
-    public Transform[] FiringSpots;  
+    public Transform[] FiringSpots;
+    public GameObject Laser;
 
     void Update()
     {
@@ -22,11 +22,9 @@ public class Fire : MonoBehaviour
 
     void LookAtEnemy() //gun mount turns towards enemy
     {
-        Vector3 targetDir = target.position - transform.position;
-        float step = speed * Time.deltaTime;
-        Vector3 newDir = Vector3.RotateTowards(transform.forward, targetDir, step, 0.0f);
-        // Move our position a step closer to the target.
-        transform.rotation = Quaternion.LookRotation(newDir);
+        Vector3 direction = (target.transform.position - transform.position).normalized;
+        Quaternion lookRot = Quaternion.LookRotation(new Vector3(direction.x, 0, direction.z));
+        transform.rotation = Quaternion.Slerp(transform.rotation, lookRot, Time.deltaTime * speed);
     }
 
     void WhichGateisAlive()
