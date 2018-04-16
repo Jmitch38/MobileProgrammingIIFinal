@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657987, g: 0.49641418, b: 0.5748162, a: 1}
+  m_IndirectSpecularColor: {r: 0.44658, g: 0.49641424, b: 0.57481676, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -152,21 +152,31 @@ Prefab:
       propertyPath: m_RootOrder
       value: 9
       objectReference: {fileID: 0}
-    - target: {fileID: 114131725189225980, guid: 47e4ffb9fef4c5e42acadea2b8ffd167,
-        type: 2}
-      propertyPath: target
-      value: 
-      objectReference: {fileID: 1580989777}
-    - target: {fileID: 114709363856989376, guid: 47e4ffb9fef4c5e42acadea2b8ffd167,
-        type: 2}
-      propertyPath: target
-      value: 
-      objectReference: {fileID: 1580989777}
     - target: {fileID: 114340138853307994, guid: 47e4ffb9fef4c5e42acadea2b8ffd167,
         type: 2}
       propertyPath: Gate
       value: 
       objectReference: {fileID: 568556701}
+    - target: {fileID: 114131725189225980, guid: 47e4ffb9fef4c5e42acadea2b8ffd167,
+        type: 2}
+      propertyPath: Currenttarget
+      value: 
+      objectReference: {fileID: 482477302}
+    - target: {fileID: 114709363856989376, guid: 47e4ffb9fef4c5e42acadea2b8ffd167,
+        type: 2}
+      propertyPath: Currenttarget
+      value: 
+      objectReference: {fileID: 482477302}
+    - target: {fileID: 114709363856989376, guid: 47e4ffb9fef4c5e42acadea2b8ffd167,
+        type: 2}
+      propertyPath: ReloadTimer
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114131725189225980, guid: 47e4ffb9fef4c5e42acadea2b8ffd167,
+        type: 2}
+      propertyPath: ReloadTimer
+      value: 5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 47e4ffb9fef4c5e42acadea2b8ffd167, type: 2}
   m_IsPrefabParent: 0
@@ -515,6 +525,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dd96f5a77342b754083ec495373bd8cc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!4 &482477302 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 4034808804828146, guid: 83250b95c322324429f80150d68a58c2,
+    type: 2}
+  m_PrefabInternal: {fileID: 396358792}
 --- !u!1 &494337981
 GameObject:
   m_ObjectHideFlags: 0
@@ -777,6 +792,11 @@ Prefab:
       propertyPath: Gate
       value: 
       objectReference: {fileID: 568556701}
+    - target: {fileID: 114368418784164274, guid: f5e0dafa949633c4d86cef17232cdc7e,
+        type: 2}
+      propertyPath: Currenttarget
+      value: 
+      objectReference: {fileID: 482477302}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f5e0dafa949633c4d86cef17232cdc7e, type: 2}
   m_IsPrefabParent: 0
