@@ -6,5 +6,5 @@ using UnityEngine.UI;
 public class GameManager : MonoBehaviour
 {
     public static GameManager GM;
-    public int GateHealth1;
+    public static int GateHealth1; 
 }

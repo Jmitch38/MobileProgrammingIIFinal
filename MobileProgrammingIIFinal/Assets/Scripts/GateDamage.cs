@@ -4,19 +4,26 @@ using UnityEngine;
 
 public class GateDamage : MonoBehaviour
 {
+    public int GateHealth;
+
+    void Update()
+    {
+        GameManager.GateHealth1 = GateHealth;
+    }
+
     void OnTriggerEnter(Collider other)
     {
         if(other.gameObject.tag == "LLaserBlue")
         {
-            GameManager.GM.GateHealth1 -= 3;
+            GateHealth -= 3;
         }
         if(other.gameObject.tag == "MLaserBlue")
         {
-            GameManager.GM.GateHealth1 -= 2;
+            GateHealth -= 2;
         }
         if (other.gameObject.tag == "SLaserBlue")
         {
-            GameManager.GM.GateHealth1 -= 1;
+            GateHealth -= 1;
         }
     }
 }

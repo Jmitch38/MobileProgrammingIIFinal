@@ -23,6 +23,7 @@ GameObject:
   - component: {fileID: 23353441106844726}
   - component: {fileID: 65716535535789462}
   - component: {fileID: 54546036303281836}
+  - component: {fileID: 114538375624194762}
   m_Layer: 0
   m_Name: LargeLaserRoundBlue
   m_TagString: LLaserBlue
@@ -111,3 +112,15 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.09031166, y: 0.07821223, z: 0.27748168}
   m_Center: {x: 0.000000027939677, y: 0.0000000037252903, z: -0.000000029802322}
+--- !u!114 &114538375624194762
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1189084562976850}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 182ff502e7a8d3d46969f7301e575f7c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 5

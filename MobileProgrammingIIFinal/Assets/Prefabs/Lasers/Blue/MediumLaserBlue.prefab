@@ -23,6 +23,7 @@ GameObject:
   - component: {fileID: 23213666412405768}
   - component: {fileID: 65094566482262474}
   - component: {fileID: 54888561581977822}
+  - component: {fileID: 114613088578970740}
   m_Layer: 0
   m_Name: MediumLaserBlue
   m_TagString: MLaserBlue
@@ -111,3 +112,15 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.05658432, y: 0.049003508, z: 0.19146653}
   m_Center: {x: 0.000000030733645, y: 0, z: 0}
+--- !u!114 &114613088578970740
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1675285102946812}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 182ff502e7a8d3d46969f7301e575f7c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 5

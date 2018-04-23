@@ -10,6 +10,9 @@ TagManager:
   - MLaserRed
   - LLaserRed
   - SLaserRed
+  - Tower
+  - Sheild
+  - Vechical
   layers:
   - Default
   - TransparentFX

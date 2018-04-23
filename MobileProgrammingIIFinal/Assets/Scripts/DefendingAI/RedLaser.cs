@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BlueLaser : MonoBehaviour
+public class RedLaser : MonoBehaviour
 {
     public float speed;
 
@@ -13,7 +13,7 @@ public class BlueLaser : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
-        if(other.tag == "Tower" || other.tag == "Sheild")
+        if (other.tag == "Vechical")
         {
             Destroy(this.gameObject);
         }

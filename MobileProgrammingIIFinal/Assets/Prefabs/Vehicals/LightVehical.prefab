@@ -77,7 +77,7 @@ GameObject:
   - component: {fileID: 195879894321603474}
   m_Layer: 0
   m_Name: LightVehical
-  m_TagString: Untagged
+  m_TagString: Vechical
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

@@ -23,6 +23,7 @@ GameObject:
   - component: {fileID: 23104687851300792}
   - component: {fileID: 65188910574041634}
   - component: {fileID: 54956301849523752}
+  - component: {fileID: 114306046355465692}
   m_Layer: 0
   m_Name: LargeLaserRoundRed
   m_TagString: LLaserRed
@@ -111,3 +112,15 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.09031166, y: 0.07821223, z: 0.27748168}
   m_Center: {x: 0.000000027939677, y: 0.0000000037252903, z: -0.000000029802322}
+--- !u!114 &114306046355465692
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1854686919923266}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a62e9d6005f199c4694fbd2fe4ce79b1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 5
