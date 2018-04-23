@@ -19,7 +19,6 @@ public class Fire : MonoBehaviour
         LookAtEnemy();
         WhichGateisAlive();
         KeepFiringAssholes();
-        ResetReloadTimer();
     }
 
     void LookAtEnemy() //gun mount turns towards enemy
@@ -39,13 +38,15 @@ public class Fire : MonoBehaviour
         float Distance = Vector3.Distance(Currenttarget.position, transform.position);
         if(Distance <= 5 && ReloadTimer <= 0)
         {
-            Instantiate(Laser, FiringSpots[0].transform.position, FiringSpots[0].transform.rotation);
-            Instantiate(Laser, FiringSpots[1].transform.position, FiringSpots[1].transform.rotation);
+            for (int i = 0; i < FiringSpots.Length; i++)
+            {
+                Instantiate(Laser, FiringSpots[i].transform.position, FiringSpots[i].transform.rotation);
+            }
             ReloadTimer += 5;
         }
     }
 
-    void ResetReloadTimer()
+    void FixedUpdate()
     {
         if(ReloadTimer > 0)
         {
