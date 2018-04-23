@@ -5,6 +5,7 @@ using UnityEngine;
 public class AttackEnemy : MonoBehaviour
 {
     Transform CurrentTarget;
+
     public int Health;
     public float TurnSpeed;
     public float ReloadTimer;
