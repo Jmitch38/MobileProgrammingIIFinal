@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657987, g: 0.49641418, b: 0.5748162, a: 1}
+  m_IndirectSpecularColor: {r: 0.44658, g: 0.49641424, b: 0.57481676, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -1358,6 +1358,25 @@ Transform:
   m_PrefabParentObject: {fileID: 4872336579698716, guid: e1fc67c415c26594188d1fc594e81814,
     type: 2}
   m_PrefabInternal: {fileID: 1924685502}
+--- !u!1 &1931158160 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1928156802066502, guid: 43aa328c8d0424347a55e2ed9fabf797,
+    type: 2}
+  m_PrefabInternal: {fileID: 2113914513}
+--- !u!114 &1931158161
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1931158160}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 10f7cadaf9aa6014eb279006a52bc8d5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Health: 0
+  TurnSpeed: 5
+  ReloadTimer: 5
 --- !u!1 &1988094126
 GameObject:
   m_ObjectHideFlags: 0
@@ -1386,6 +1405,37 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
+--- !u!1 &2079681661 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1323476604432482, guid: 43aa328c8d0424347a55e2ed9fabf797,
+    type: 2}
+  m_PrefabInternal: {fileID: 2113914513}
+--- !u!114 &2079681663
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2079681661}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 10f7cadaf9aa6014eb279006a52bc8d5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Health: 0
+  TurnSpeed: 5
+  ReloadTimer: 5
+--- !u!135 &2079681666
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2079681661}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 4.87
+  m_Center: {x: 0, y: 0.06680834, z: 0}
 --- !u!1001 &2113914513
 Prefab:
   m_ObjectHideFlags: 0
@@ -1395,7 +1445,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4789632594291360, guid: 43aa328c8d0424347a55e2ed9fabf797, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -1.0009995
+      value: 5.74
       objectReference: {fileID: 0}
     - target: {fileID: 4789632594291360, guid: 43aa328c8d0424347a55e2ed9fabf797, type: 2}
       propertyPath: m_LocalPosition.y
@@ -1403,7 +1453,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4789632594291360, guid: 43aa328c8d0424347a55e2ed9fabf797, type: 2}
       propertyPath: m_LocalPosition.z
-      value: 15.187927
+      value: 15.51
       objectReference: {fileID: 0}
     - target: {fileID: 4789632594291360, guid: 43aa328c8d0424347a55e2ed9fabf797, type: 2}
       propertyPath: m_LocalRotation.x
