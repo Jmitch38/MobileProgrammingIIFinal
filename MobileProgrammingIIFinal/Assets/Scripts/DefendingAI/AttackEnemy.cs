@@ -7,7 +7,6 @@ public class AttackEnemy : MonoBehaviour
     //under any circumstance DO NOT TOUCH THIS CODE
     #region
     private List<Transform> targets = new List<Transform>();
-    //Transform CurrentTarget;
     private Transform _primaryTarget;
     //finds an important target to focus on and caches the reference
     public Transform Target
@@ -37,16 +36,30 @@ public class AttackEnemy : MonoBehaviour
     public float TurnSpeed;
     public float ReloadTimer;
 
+    [Header("--Guns--")]
+    public GameObject[] Guns;
+
     void Update()
     {
-        LookAtEnemy();
+        TurnEnemy();
+        MoveGunsUpAndDown();
     }
 
-    void LookAtEnemy()
+    void TurnEnemy()
     {
         Vector3 direction = (Target.transform.position - transform.position).normalized;
         Quaternion lookRot = Quaternion.LookRotation(new Vector3(direction.x, 0, direction.z));
         transform.rotation = Quaternion.Slerp(transform.rotation, lookRot, Time.deltaTime * TurnSpeed);
+    }
+
+    void MoveGunsUpAndDown()
+    {
+        for (int i = 0; i < Guns.Length; i++)
+        {           
+            Vector3 direction = (Target.transform.position - Guns[i].transform.position).normalized;
+            Quaternion lookRot = Quaternion.LookRotation(new Vector3(0, direction.y, 0));
+            Guns[i].transform.rotation = Quaternion.Slerp(Guns[i].transform.rotation, lookRot, Time.deltaTime * TurnSpeed);
+        }
     }
 
     void FixedUpdate()
@@ -76,7 +89,6 @@ public class AttackEnemy : MonoBehaviour
         {
             _primaryTarget = null;
         }
-
         targets.Remove(other.transform);
     }
 }
