@@ -36,13 +36,14 @@ public class AttackEnemy : MonoBehaviour
     public float TurnSpeed;
     public float ReloadTimer;
 
-    [Header("--Guns--")]
-    public GameObject[] Guns;
+    [Header("--Lasers--")]
+    public Transform[] LaserSpots;
+    public GameObject Laser; 
 
     void Update()
     {
         TurnEnemy();
-        MoveGunsUpAndDown();
+        FireAssholes();
     }
 
     void TurnEnemy()
@@ -52,15 +53,15 @@ public class AttackEnemy : MonoBehaviour
         transform.rotation = Quaternion.Slerp(transform.rotation, lookRot, Time.deltaTime * TurnSpeed);
     }
 
-    void MoveGunsUpAndDown()
+    void FireAssholes()
     {
-        for (int i = 0; i < Guns.Length; i++)
+        if (ReloadTimer <= 0)
         {
-            Guns[i].transform.LookAt(Target.position);
-            
-            //Vector3 direction = (Target.transform.position - Guns[i].transform.position).normalized;
-            //Quaternion lookRot = Quaternion.LookRotation(new Vector3(0, direction.y, 0));
-            //Guns[i].transform.rotation = Quaternion.Slerp(Guns[i].transform.rotation, lookRot, Time.deltaTime * TurnSpeed);
+            for (int i = 0; i < LaserSpots.Length; i++)
+            {
+                Instantiate(Laser, LaserSpots[i].transform.position, LaserSpots[i].transform.rotation);
+            }
+            ReloadTimer += 5;
         }
     }
 
