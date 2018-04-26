@@ -55,10 +55,12 @@ public class AttackEnemy : MonoBehaviour
     void MoveGunsUpAndDown()
     {
         for (int i = 0; i < Guns.Length; i++)
-        {           
-            Vector3 direction = (Target.transform.position - Guns[i].transform.position).normalized;
-            Quaternion lookRot = Quaternion.LookRotation(new Vector3(0, direction.y, 0));
-            Guns[i].transform.rotation = Quaternion.Slerp(Guns[i].transform.rotation, lookRot, Time.deltaTime * TurnSpeed);
+        {
+            Guns[i].transform.LookAt(Target.position);
+            
+            //Vector3 direction = (Target.transform.position - Guns[i].transform.position).normalized;
+            //Quaternion lookRot = Quaternion.LookRotation(new Vector3(0, direction.y, 0));
+            //Guns[i].transform.rotation = Quaternion.Slerp(Guns[i].transform.rotation, lookRot, Time.deltaTime * TurnSpeed);
         }
     }
 
