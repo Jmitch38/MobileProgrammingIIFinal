@@ -14,6 +14,14 @@ public class MoveToAgent : MonoBehaviour
         agent.destination = Gate.position;
     }
 
+    void Update()
+    {
+        if (Health <= 0)
+        {
+            Destroy(gameObject);
+        }
+    }
+
     void OnTriggerEnter(Collider other)
     {
         if(other.gameObject.tag == "LLaserRed")

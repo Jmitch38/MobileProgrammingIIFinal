@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657987, g: 0.49641418, b: 0.5748162, a: 1}
+  m_IndirectSpecularColor: {r: 0.44658, g: 0.49641424, b: 0.57481676, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -785,6 +785,11 @@ Prefab:
       propertyPath: Currenttarget
       value: 
       objectReference: {fileID: 482477302}
+    - target: {fileID: 114969924862779102, guid: f5e0dafa949633c4d86cef17232cdc7e,
+        type: 2}
+      propertyPath: Health
+      value: 25
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f5e0dafa949633c4d86cef17232cdc7e, type: 2}
   m_IsPrefabParent: 0
@@ -992,7 +997,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 958456759}
   m_LocalRotation: {x: -0.3700065, y: -0.6024565, z: 0.3696644, w: -0.602901}
-  m_LocalPosition: {x: -2.94, y: 7.22, z: 19.19}
+  m_LocalPosition: {x: -3.91, y: 7.22, z: 20.98}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1009,6 +1014,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 83c834b78eb785a439577708b1866eff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dragSpeed: 2
+  cameraDragging: 1
+  outerLeft: -10
+  outerRight: 10
 --- !u!4 &1023439434 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4847816213441112, guid: cd9442291852dfb4b99f03a9cf1a3315,
