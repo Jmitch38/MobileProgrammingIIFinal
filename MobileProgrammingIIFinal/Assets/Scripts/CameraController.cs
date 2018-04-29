@@ -31,7 +31,6 @@ public class CameraController : MonoBehaviour
         }
         if (cameraDragging)
         {
-
             if (Input.GetMouseButtonDown(0))
             {
                 dragOrigin = Input.mousePosition;
