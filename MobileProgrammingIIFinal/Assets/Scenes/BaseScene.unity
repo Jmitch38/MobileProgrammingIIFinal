@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44658, g: 0.49641424, b: 0.57481676, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657987, g: 0.49641418, b: 0.5748162, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -126,7 +126,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4751120426353816, guid: 47e4ffb9fef4c5e42acadea2b8ffd167, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 0.147
+      value: 0.284
       objectReference: {fileID: 0}
     - target: {fileID: 4751120426353816, guid: 47e4ffb9fef4c5e42acadea2b8ffd167, type: 2}
       propertyPath: m_LocalPosition.z
@@ -152,7 +152,7 @@ Prefab:
       propertyPath: m_RootOrder
       value: 9
       objectReference: {fileID: 0}
-    - target: {fileID: 114131725189225980, guid: 47e4ffb9fef4c5e42acadea2b8ffd167,
+    - target: {fileID: 114709363856989376, guid: 47e4ffb9fef4c5e42acadea2b8ffd167,
         type: 2}
       propertyPath: Currenttarget
       value: 
@@ -162,7 +162,7 @@ Prefab:
       propertyPath: Gate
       value: 
       objectReference: {fileID: 568556701}
-    - target: {fileID: 114709363856989376, guid: 47e4ffb9fef4c5e42acadea2b8ffd167,
+    - target: {fileID: 114131725189225980, guid: 47e4ffb9fef4c5e42acadea2b8ffd167,
         type: 2}
       propertyPath: Currenttarget
       value: 
@@ -662,7 +662,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4915685735080636, guid: f5e0dafa949633c4d86cef17232cdc7e, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 0.16800001
+      value: 0.275
       objectReference: {fileID: 0}
     - target: {fileID: 4915685735080636, guid: f5e0dafa949633c4d86cef17232cdc7e, type: 2}
       propertyPath: m_LocalPosition.z
@@ -688,16 +688,16 @@ Prefab:
       propertyPath: m_RootOrder
       value: 8
       objectReference: {fileID: 0}
-    - target: {fileID: 114368418784164274, guid: f5e0dafa949633c4d86cef17232cdc7e,
-        type: 2}
-      propertyPath: Currenttarget
-      value: 
-      objectReference: {fileID: 482477302}
     - target: {fileID: 114969924862779102, guid: f5e0dafa949633c4d86cef17232cdc7e,
         type: 2}
       propertyPath: Gate
       value: 
       objectReference: {fileID: 568556701}
+    - target: {fileID: 114368418784164274, guid: f5e0dafa949633c4d86cef17232cdc7e,
+        type: 2}
+      propertyPath: Currenttarget
+      value: 
+      objectReference: {fileID: 482477302}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f5e0dafa949633c4d86cef17232cdc7e, type: 2}
   m_IsPrefabParent: 0
