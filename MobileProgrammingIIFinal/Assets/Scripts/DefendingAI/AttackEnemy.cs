@@ -32,7 +32,6 @@ public class AttackEnemy : MonoBehaviour
     #endregion 
 
     [Header("--Turret Stats--")]
-    public int Health;
     public float TurnSpeed;
     public float ReloadTimer;
 

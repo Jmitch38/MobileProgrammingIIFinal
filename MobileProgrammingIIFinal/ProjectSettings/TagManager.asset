@@ -13,6 +13,7 @@ TagManager:
   - Tower
   - Sheild
   - Vechical
+  - TowerSpot
   layers:
   - Default
   - TransparentFX
@@ -22,7 +23,7 @@ TagManager:
   - UI
   - 
   - 
-  - 
+  - Tower
   - 
   - 
   - 

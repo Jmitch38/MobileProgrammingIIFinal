@@ -23,7 +23,7 @@ GameObject:
   - component: {fileID: 23242551374850176}
   - component: {fileID: 114912740518684510}
   - component: {fileID: 135203311442805466}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: HeavyTower
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -38,7 +38,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4602448534055712}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: LaserSpot_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -55,7 +55,7 @@ GameObject:
   - component: {fileID: 4455105745730456}
   - component: {fileID: 33401661594455966}
   - component: {fileID: 23587362025490392}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: HeavyLaser (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -70,7 +70,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4690027363730272}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: LaserSpot_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -87,7 +87,7 @@ GameObject:
   - component: {fileID: 4097193573678162}
   - component: {fileID: 33988697267576222}
   - component: {fileID: 23793433138876210}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: HeavyLaser (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -300,7 +300,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 10f7cadaf9aa6014eb279006a52bc8d5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Health: 100
   TurnSpeed: 5
   ReloadTimer: 3
   LaserSpots:
@@ -314,7 +313,7 @@ SphereCollider:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1004790379928592}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 4.67
