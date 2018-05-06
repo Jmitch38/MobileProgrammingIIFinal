@@ -301,11 +301,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   TurnSpeed: 5
-  ReloadTimer: 3
+  ReloadTimer: 5
+  SetTimer: 4
   LaserSpots:
   - {fileID: 4602448534055712}
   - {fileID: 4690027363730272}
   Laser: {fileID: 1899733195754068, guid: 2afc42c00c34c8b42b805206488aaadf, type: 2}
+  Fire: {fileID: 8300000, guid: 60ab2a7569613994f98933258d61c5af, type: 3}
 --- !u!135 &135203311442805466
 SphereCollider:
   m_ObjectHideFlags: 1

@@ -409,6 +409,7 @@ MonoBehaviour:
   - {fileID: 4714362363232446}
   Laser: {fileID: 1723246122942450, guid: 6f9ac37cb1eebc94abc5c277e81192f9, type: 2}
   ReloadTimer: 5
+  LaserShoot: {fileID: 8300000, guid: c0a0216db5d09d04092a29f876f0cdb4, type: 3}
 --- !u!114 &114969924862779102
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -420,9 +421,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a4e6f42a037e4045a2285a2f90f089c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Health: 25
-  LargeExplosion: {fileID: 8300000, guid: b0c9cdf1f02dd4e4498641dce2005fd9, type: 3}
+  Health: 15
   SmallExplosion: {fileID: 8300000, guid: bee08c316dc8f3e4d8a815da16b72d83, type: 3}
+  LargeExplosion: {fileID: 8300000, guid: b0c9cdf1f02dd4e4498641dce2005fd9, type: 3}
 --- !u!195 &195879894321603474
 NavMeshAgent:
   m_ObjectHideFlags: 1
@@ -436,7 +437,7 @@ NavMeshAgent:
   m_Acceleration: 8
   avoidancePriority: 50
   m_AngularSpeed: 120
-  m_StoppingDistance: 0
+  m_StoppingDistance: 2
   m_AutoTraverseOffMeshLink: 0
   m_AutoBraking: 1
   m_AutoRepath: 0

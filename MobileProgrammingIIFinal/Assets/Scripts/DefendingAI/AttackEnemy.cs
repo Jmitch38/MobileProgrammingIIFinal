@@ -34,10 +34,12 @@ public class AttackEnemy : MonoBehaviour
     [Header("--Turret Stats--")]
     public float TurnSpeed;
     public float ReloadTimer;
+    public float SetTimer;
 
     [Header("--Lasers--")]
     public Transform[] LaserSpots;
-    public GameObject Laser; 
+    public GameObject Laser;
+    public AudioClip Fire;
 
     void Update()
     {
@@ -58,9 +60,10 @@ public class AttackEnemy : MonoBehaviour
         {
             for (int i = 0; i < LaserSpots.Length; i++)
             {
+                AudioSource.PlayClipAtPoint(Fire, transform.position);
                 Instantiate(Laser, LaserSpots[i].transform.position, LaserSpots[i].transform.rotation);
             }
-            ReloadTimer += 5;
+            ReloadTimer += SetTimer;
         }
     }
 

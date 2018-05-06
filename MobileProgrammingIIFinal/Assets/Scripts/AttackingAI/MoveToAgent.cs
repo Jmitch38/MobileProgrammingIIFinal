@@ -10,6 +10,8 @@ public class MoveToAgent : MonoBehaviour
     GameObject End;
     public int Health;
     NavMeshAgent agent;
+    public AudioClip SmallExplosion;
+    public AudioClip LargeExplosion;
 
 	void Start ()
     {
@@ -50,11 +52,13 @@ public class MoveToAgent : MonoBehaviour
         }
         if(other.gameObject.tag == "MLaserRed")
         {
+            AudioSource.PlayClipAtPoint(LargeExplosion, transform.position);
             Health -= 2;
             Destroy(other.gameObject);
         }
         if(other.gameObject.tag == "SLaserRed")
         {
+            AudioSource.PlayClipAtPoint(SmallExplosion, transform.position);
             Health -= 1;
             Destroy(other.gameObject);
         }

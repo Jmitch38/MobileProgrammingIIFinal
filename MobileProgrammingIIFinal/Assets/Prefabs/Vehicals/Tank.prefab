@@ -585,6 +585,7 @@ MonoBehaviour:
   - {fileID: 4686467288474120}
   Laser: {fileID: 1723246122942450, guid: 6f9ac37cb1eebc94abc5c277e81192f9, type: 2}
   ReloadTimer: 5
+  LaserShoot: {fileID: 8300000, guid: c0a0216db5d09d04092a29f876f0cdb4, type: 3}
 --- !u!114 &114340138853307994
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -596,9 +597,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a4e6f42a037e4045a2285a2f90f089c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Health: 50
-  LargeExplosion: {fileID: 8300000, guid: b0c9cdf1f02dd4e4498641dce2005fd9, type: 3}
+  Health: 25
   SmallExplosion: {fileID: 8300000, guid: bee08c316dc8f3e4d8a815da16b72d83, type: 3}
+  LargeExplosion: {fileID: 8300000, guid: b0c9cdf1f02dd4e4498641dce2005fd9, type: 3}
 --- !u!114 &114709363856989376
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -615,6 +616,7 @@ MonoBehaviour:
   - {fileID: 4271245730698142}
   Laser: {fileID: 1675285102946812, guid: 0bb8f8b7cab579747b7809392de91c93, type: 2}
   ReloadTimer: 5
+  LaserShoot: {fileID: 8300000, guid: 60ab2a7569613994f98933258d61c5af, type: 3}
 --- !u!195 &195748265340785620
 NavMeshAgent:
   m_ObjectHideFlags: 1

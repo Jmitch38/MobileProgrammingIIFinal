@@ -212,3 +212,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Gate1orGate2: 1
   Siren: {fileID: 8300000, guid: dfc37d9457b67ba4ea021c45973346ad, type: 3}
+  LargeExplosion: {fileID: 8300000, guid: b0c9cdf1f02dd4e4498641dce2005fd9, type: 3}
+  SmallExplosion: {fileID: 8300000, guid: bee08c316dc8f3e4d8a815da16b72d83, type: 3}

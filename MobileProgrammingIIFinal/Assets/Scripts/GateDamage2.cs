@@ -7,6 +7,8 @@ public class GateDamage2 : MonoBehaviour
     int health;
     public bool Gate1orGate2;
     public AudioClip Siren;
+    public AudioClip LargeExplosion;
+    public AudioClip SmallExplosion;
 
     void Start()
     {
@@ -37,11 +39,13 @@ public class GateDamage2 : MonoBehaviour
     {
         if(other.tag == "SLaserBlue")
         {
+            AudioSource.PlayClipAtPoint(SmallExplosion, transform.position);
             health -= 1;
             Destroy(other.gameObject);
         }
         if(other.tag == "MLaserBlue")
         {
+            AudioSource.PlayClipAtPoint(LargeExplosion, transform.position);
             health -= 2;
             Destroy(other.gameObject);
         }

@@ -11,10 +11,11 @@ public class Fire : MonoBehaviour
     Vector3 Currenttarget;
     public float speed;
 
-    //where lasers come from
+    [Header("--Lasers--")]
     public Transform[] FiringSpots;
     public GameObject Laser;
     public float ReloadTimer;
+    public AudioClip LaserShoot;
 
     void Start()
     {
@@ -60,6 +61,7 @@ public class Fire : MonoBehaviour
         {
             for (int i = 0; i < FiringSpots.Length; i++)
             {
+                AudioSource.PlayClipAtPoint(LaserShoot, transform.position);
                 Instantiate(Laser, FiringSpots[i].transform.position, FiringSpots[i].transform.rotation);
             }
             ReloadTimer += 5;
