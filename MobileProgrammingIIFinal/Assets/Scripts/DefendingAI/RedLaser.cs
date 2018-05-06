@@ -10,12 +10,4 @@ public class RedLaser : MonoBehaviour
     {
         transform.Translate(Vector3.forward * Time.deltaTime * speed);
     }
-
-    void OnTriggerEnter(Collider other)
-    {
-        if (other.tag == "Vechical")
-        {
-            Destroy(this.gameObject);
-        }
-    }
 }

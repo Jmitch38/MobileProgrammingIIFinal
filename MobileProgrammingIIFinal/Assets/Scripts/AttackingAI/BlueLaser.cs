@@ -10,12 +10,4 @@ public class BlueLaser : MonoBehaviour
     {
         transform.Translate(Vector3.forward * Time.deltaTime * speed);
     }
-
-    void OnTriggerEnter(Collider other)
-    {
-        if(other.tag == "Tower" || other.tag == "Sheild")
-        {
-            Destroy(this.gameObject);
-        }
-    }
 }

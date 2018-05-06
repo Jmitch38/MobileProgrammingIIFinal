@@ -14,6 +14,9 @@ TagManager:
   - Sheild
   - Vechical
   - TowerSpot
+  - Gate1
+  - Gate2
+  - End
   layers:
   - Default
   - TransparentFX

@@ -403,7 +403,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   TurnSpeed: 5
-  ReloadTimer: 5
+  ReloadTimer: 2
   LaserSpots:
   - {fileID: 4984548421892368}
   - {fileID: 4119139816154928}

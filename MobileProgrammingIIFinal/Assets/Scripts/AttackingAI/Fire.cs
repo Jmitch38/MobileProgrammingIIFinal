@@ -5,14 +5,23 @@ using UnityEngine;
 public class Fire : MonoBehaviour
 {
     //Targeting
-    public Transform[] Gates;
-    public Transform Currenttarget;
+    GameObject Gate1;
+    GameObject Gate2;
+    GameObject End;
+    Vector3 Currenttarget;
     public float speed;
 
     //where lasers come from
     public Transform[] FiringSpots;
     public GameObject Laser;
     public float ReloadTimer;
+
+    void Start()
+    {
+        Gate1 = GameObject.FindGameObjectWithTag("Gate1");
+        Gate2 = GameObject.FindGameObjectWithTag("Gate2");
+        End = GameObject.FindGameObjectWithTag("End");
+    }
 
     void Update()
     {
@@ -23,19 +32,30 @@ public class Fire : MonoBehaviour
 
     void LookAtEnemy() //gun mount turns towards enemy
     {
-        Vector3 direction = (Currenttarget.transform.position - transform.position).normalized;
+        Vector3 direction = (Currenttarget - transform.position).normalized;
         Quaternion lookRot = Quaternion.LookRotation(new Vector3(direction.x, 0, direction.z));
         transform.rotation = Quaternion.Slerp(transform.rotation, lookRot, Time.deltaTime * speed);
     }
 
     void WhichGateisAlive()
     {
-
+        if(GameManager.GateHealth1 > 0)
+        {
+            Currenttarget = Gate1.transform.position;
+        }
+        else if (GameManager.GateHealth1 <= 0 && GameManager.GateHealth2 > 1)
+        {
+            Currenttarget = Gate2.transform.position;
+        }
+        else
+        {
+            Currenttarget = End.transform.position;
+        }
     }
 
     void KeepFiringAssholes()
     {
-        float Distance = Vector3.Distance(Currenttarget.position, transform.position);
+        float Distance = Vector3.Distance(Currenttarget, transform.position);
         if(Distance <= 5 && ReloadTimer <= 0)
         {
             for (int i = 0; i < FiringSpots.Length; i++)

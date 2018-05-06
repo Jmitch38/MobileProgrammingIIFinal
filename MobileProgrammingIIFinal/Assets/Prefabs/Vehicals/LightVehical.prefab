@@ -403,8 +403,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 370f16fd53673104b916c99ec090702e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Gates: []
-  Currenttarget: {fileID: 0}
   speed: 1
   FiringSpots:
   - {fileID: 4945622303650598}
@@ -422,8 +420,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a4e6f42a037e4045a2285a2f90f089c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Gate: {fileID: 0}
   Health: 25
+  LargeExplosion: {fileID: 8300000, guid: b0c9cdf1f02dd4e4498641dce2005fd9, type: 3}
+  SmallExplosion: {fileID: 8300000, guid: bee08c316dc8f3e4d8a815da16b72d83, type: 3}
 --- !u!195 &195879894321603474
 NavMeshAgent:
   m_ObjectHideFlags: 1

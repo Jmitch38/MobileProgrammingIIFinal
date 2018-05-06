@@ -24,11 +24,28 @@ public class TowerPlacement : MonoBehaviour
                 {
                     if (GameManager.TowerSize == true)
                     {
-                        SmallTower = Instantiate(SmallTower, transform.position, transform.rotation);
+                        if(GameManager.Money < 200)
+                        {
+                            UIManager.HideLowMoney += 5;
+                        }
+                        else
+                        {
+                            SmallTower = Instantiate(SmallTower, transform.position, transform.rotation);
+                            GameManager.Money -= 200;
+                        }
+                        
                     }
                     else if (GameManager.TowerSize == false)
                     {
-                        LargeTower = Instantiate(LargeTower, transform.position, transform.rotation);
+                        if(GameManager.Money < 350)
+                        {
+                            UIManager.HideLowMoney += 5;
+                        }
+                        else
+                        {
+                            LargeTower = Instantiate(LargeTower, transform.position, transform.rotation);
+                            GameManager.Money -= 350;
+                        }                     
                     }
                 }
             }
