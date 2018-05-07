@@ -5,13 +5,51 @@ using UnityEngine;
 public class SpawnManager : MonoBehaviour
 {
     public Transform SpawnLocation;
-    public int CurrentWave;
+    int CurrentWave;
+    float SpawnTimer;
+    public bool IsPlayerReady;
+    int arrayLength;
 
-    public GameObject[] Wave1;
-    public GameObject[] Wave2;
+    public GameObject[] Wave;
 
-	void FixedUpdate ()
+    void Start()
     {
-		
+        IsPlayerReady = false;
+        arrayLength = 0;
+        SpawnTimer = 0;
+    }
+    void Update ()
+    {
+		if(IsPlayerReady == true && SpawnTimer <= 0)
+        {
+            if (arrayLength < Wave.Length)
+            {
+                Instantiate(Wave[arrayLength], SpawnLocation.transform.position, SpawnLocation.transform.rotation);
+                SpawnTimer += 3;
+                arrayLength += 1;
+            }
+            else if (arrayLength > Wave.Length)
+            {
+                IsPlayerReady = false;
+                arrayLength = 0;
+            }
+        }
 	}
+
+    void FixedUpdate()
+    {
+        if(SpawnTimer > 0)
+        {
+            SpawnTimer -= 1 * Time.deltaTime;
+        }
+        else
+        {
+            SpawnTimer = 0;
+        }
+    }
+
+    public void PlayerIsReady()
+    {
+        IsPlayerReady = true;
+    }
 }
