@@ -7,7 +7,6 @@ public class SpawnManager : MonoBehaviour
 {
     public Transform SpawnLocation;
     public Text WaveNumber;
-    public Text WaveDefeated;
     bool IsPlayerReady;
     int CurrentWave;
     int ran;
@@ -21,18 +20,33 @@ public class SpawnManager : MonoBehaviour
         CurrentWave = 1;
         ran = 0;
         time = 0;
-        WaveDefeated.enabled = false;
     }
 
     void Update ()
     {
-		if(time > 32f)
+        if(GameManager.AIWin == false)
         {
-            IsPlayerReady = false;
-            CancelInvoke("SpawnEnemies");
-            time = 0f;
-            CurrentWave += 1;
-            WaveDefeated.enabled = true;
+            if (time > 32f)
+            {
+                IsPlayerReady = false;
+                CancelInvoke("SpawnEnemies");
+                time = 0f;
+                CurrentWave += 1;
+            }
+        }
+		
+        if(IsPlayerReady == false)
+        {
+            WaveNumber.text = "Wave: Wave ended!";
+        }
+        else
+        {
+            WaveNumber.text = "Wave: " + CurrentWave;
+        }
+        
+        if(CurrentWave >= 4)
+        {
+            GameManager.PlayerWin = true;
         }
 	}
 
@@ -46,7 +60,6 @@ public class SpawnManager : MonoBehaviour
 
     public void PlayerIsReady()
     {
-        WaveDefeated.enabled = false;
         IsPlayerReady = true;
         InvokeRepeating("SpawnEnemies", 0f, 4f);
     }

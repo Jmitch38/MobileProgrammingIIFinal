@@ -14,6 +14,7 @@ public class UIManager : MonoBehaviour
     public Button Exit;
     public Button LightTower;
     public Button HeavyTower;
+    public Button start;
     public static float HideLowMoney;
 
     void Start()
@@ -50,6 +51,14 @@ public class UIManager : MonoBehaviour
         if (GameManager.AIWin == true)
         {
             YouLose.enabled = true;
+            Retry.interactable = true;
+            start.interactable = false;
+        }
+
+        if(GameManager.PlayerWin == true)
+        {
+            YouWin.enabled = true;
+            start.interactable = false;
             Retry.interactable = true;
         }
     }
