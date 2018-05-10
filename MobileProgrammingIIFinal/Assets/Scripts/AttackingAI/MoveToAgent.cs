@@ -25,8 +25,16 @@ public class MoveToAgent : MonoBehaviour
     {
         if (Health <= 0)
         {
-            GameManager.Money += 150;
-            Destroy(gameObject);
+            if(gameObject.name == "Tank(Clone)")
+            {
+                GameManager.Money += 250;
+                Destroy(gameObject);
+            }
+            else if(gameObject.name == "LightVehical(Clone)")
+            {
+                GameManager.Money += 100;
+                Destroy(gameObject);
+            }
         }
 
         if (GameManager.GateHealth1 > 0)
@@ -53,7 +61,7 @@ public class MoveToAgent : MonoBehaviour
         if(other.gameObject.tag == "MLaserRed")
         {
             AudioSource.PlayClipAtPoint(LargeExplosion, transform.position);
-            Health -= 2;
+            Health -= 5;
             Destroy(other.gameObject);
         }
         if(other.gameObject.tag == "SLaserRed")

@@ -44,7 +44,7 @@ public class TowerPlacement : MonoBehaviour
                         else
                         {
                             LargeTower = Instantiate(LargeTower, transform.position, transform.rotation);
-                            GameManager.Money -= 350;
+                            GameManager.Money -= 400;
                         }                     
                     }
                 }

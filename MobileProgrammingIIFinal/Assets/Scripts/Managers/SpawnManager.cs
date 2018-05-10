@@ -1,55 +1,59 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class SpawnManager : MonoBehaviour
 {
     public Transform SpawnLocation;
+    public Text WaveNumber;
+    public Text WaveDefeated;
+    bool IsPlayerReady;
     int CurrentWave;
-    float SpawnTimer;
-    public bool IsPlayerReady;
-    int arrayLength;
+    int ran;
+    public float time;
 
     public GameObject[] Wave;
 
     void Start()
     {
         IsPlayerReady = false;
-        arrayLength = 0;
-        SpawnTimer = 0;
+        CurrentWave = 1;
+        ran = 0;
+        time = 0;
+        WaveDefeated.enabled = false;
     }
+
     void Update ()
     {
-		if(IsPlayerReady == true && SpawnTimer <= 0)
+		if(time > 32f)
         {
-            if (arrayLength < Wave.Length)
-            {
-                Instantiate(Wave[arrayLength], SpawnLocation.transform.position, SpawnLocation.transform.rotation);
-                SpawnTimer += 3;
-                arrayLength += 1;
-            }
-            else if (arrayLength > Wave.Length)
-            {
-                IsPlayerReady = false;
-                arrayLength = 0;
-            }
+            IsPlayerReady = false;
+            CancelInvoke("SpawnEnemies");
+            time = 0f;
+            CurrentWave += 1;
+            WaveDefeated.enabled = true;
         }
 	}
 
     void FixedUpdate()
     {
-        if(SpawnTimer > 0)
+        if(IsPlayerReady == true)
         {
-            SpawnTimer -= 1 * Time.deltaTime;
-        }
-        else
-        {
-            SpawnTimer = 0;
+            time += 1f * Time.deltaTime;
         }
     }
 
     public void PlayerIsReady()
     {
+        WaveDefeated.enabled = false;
         IsPlayerReady = true;
+        InvokeRepeating("SpawnEnemies", 0f, 4f);
+    }
+
+    void SpawnEnemies()
+    {
+        ran = Random.Range(0, Wave.Length);
+        Instantiate(Wave[ran], SpawnLocation.position, SpawnLocation.rotation);
     }
 }

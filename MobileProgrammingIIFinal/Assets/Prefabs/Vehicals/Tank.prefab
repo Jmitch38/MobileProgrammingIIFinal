@@ -597,7 +597,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a4e6f42a037e4045a2285a2f90f089c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Health: 30
+  Health: 50
   SmallExplosion: {fileID: 8300000, guid: bee08c316dc8f3e4d8a815da16b72d83, type: 3}
   LargeExplosion: {fileID: 8300000, guid: b0c9cdf1f02dd4e4498641dce2005fd9, type: 3}
 --- !u!114 &114709363856989376

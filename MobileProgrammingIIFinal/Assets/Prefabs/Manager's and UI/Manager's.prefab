@@ -57,6 +57,10 @@ MonoBehaviour:
   YouLose: {fileID: 0}
   YouWin: {fileID: 0}
   LowMoney: {fileID: 0}
+  Retry: {fileID: 0}
+  Exit: {fileID: 0}
+  LightTower: {fileID: 0}
+  HeavyTower: {fileID: 0}
 --- !u!114 &114550759462269306
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -80,8 +84,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   SpawnLocation: {fileID: 0}
-  IsPlayerReady: 0
+  WaveNumber: {fileID: 0}
+  WaveDefeated: {fileID: 0}
+  time: 0
   Wave:
   - {fileID: 1932090005458520, guid: 47e4ffb9fef4c5e42acadea2b8ffd167, type: 2}
+  - {fileID: 1318235533191468, guid: f5e0dafa949633c4d86cef17232cdc7e, type: 2}
   - {fileID: 1318235533191468, guid: f5e0dafa949633c4d86cef17232cdc7e, type: 2}
   - {fileID: 1318235533191468, guid: f5e0dafa949633c4d86cef17232cdc7e, type: 2}

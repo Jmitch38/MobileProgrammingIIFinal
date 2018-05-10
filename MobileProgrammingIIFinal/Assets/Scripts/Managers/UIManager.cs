@@ -10,11 +10,18 @@ public class UIManager : MonoBehaviour
     public Text YouLose;
     public Text YouWin;
     public Text LowMoney;
+    public Button Retry;
+    public Button Exit;
+    public Button LightTower;
+    public Button HeavyTower;
     public static float HideLowMoney;
 
     void Start()
     {
-        LowMoney.enabled = false;
+        LowMoney.enabled = false;      
+        YouLose.enabled = false;
+        YouWin.enabled = false;
+        Retry.interactable = false;
     }
 
     void Update()
@@ -27,6 +34,23 @@ public class UIManager : MonoBehaviour
         else
         {
             LowMoney.enabled = false;
+        }
+
+        if (GameManager.TowerSize == true)
+        {
+            LightTower.interactable = false;
+            HeavyTower.interactable = true;
+        }
+        else if (GameManager.TowerSize == false)
+        {
+            LightTower.interactable = true;
+            HeavyTower.interactable = false;
+        }
+
+        if (GameManager.AIWin == true)
+        {
+            YouLose.enabled = true;
+            Retry.interactable = true;
         }
     }
 

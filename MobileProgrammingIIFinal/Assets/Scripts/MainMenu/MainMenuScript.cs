@@ -9,4 +9,9 @@ public class MainMenuScript : MonoBehaviour
     {
         SceneManager.LoadSceneAsync(LevelName);
     }
+
+    public void ReloadLevel()
+    {
+        SceneManager.LoadSceneAsync(SceneManager.GetActiveScene().name);
+    }
 }
